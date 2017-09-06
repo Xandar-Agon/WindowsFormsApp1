@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
@@ -17,20 +17,19 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("São " + DateTime.Now.ToShortTimeString());
+
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("Bem-vindo ao inferno");
-            lbl_nome.Text = "ATEC";
+
         }
 
-        private void btn_sair_Click(object sender, EventArgs e)
+        private void Soma_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            MessageBox.Show(Convert.ToString((Convert.ToInt32(textBox1.Text) + Convert.ToInt32(textBox2.Text))));
         }
     }
 }
